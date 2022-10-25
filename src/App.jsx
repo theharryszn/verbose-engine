@@ -1,10 +1,16 @@
-import './App.css';
-import './assets/styles/fonts.css';
-import Routes from './Routes';
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import "./assets/styles/fonts.css";
+import ChatProvider from "./data/Chat";
+import Routes from "./Routes";
 
 function App() {
   return (
-    <Routes/>
+    <ChatProvider>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </ChatProvider>
   );
 }
 
